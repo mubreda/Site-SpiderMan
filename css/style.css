@@ -482,44 +482,6 @@ p {
   }
 }
 
-.bx {
-  width: 40px;
-  height: 40px;
-  display: none;
-  position: relative;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 960px) {
-  .bx {
-    display: block;
-  }
-}
-
-.bx::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 33%;
-  left: 12%;
-  width: 75%;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #EDF1F7;
-}
-
-.bx::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 57%;
-  left: 12%;
-  width: 75%;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #EDF1F7;
-}
-
 .spiderman {
   width: 130%;
   -webkit-transition: .7s ease;
@@ -675,8 +637,30 @@ header {
 
 @media screen and (max-width: 960px) {
   .nav-list {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -80%;
+    height: 100vh;
+    margin: 0;
+    background: -webkit-gradient(linear, right top, left top, color-stop(-12.5%, #14181F), color-stop(108.5%, rgba(20, 24, 31, 0)));
+    background: linear-gradient(270deg, #14181F -12.5%, rgba(20, 24, 31, 0) 108.5%);
+    width: 80%;
+    max-width: 180px;
+    padding: 100px 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-transition: .7s ease;
+    transition: .7s ease;
   }
+}
+
+.nav-list.active {
+  right: 0;
 }
 
 .nav-link {
@@ -744,6 +728,62 @@ header {
   fill: #F02A2F;
   -webkit-transform: translate3d(0, -2px, 0);
           transform: translate3d(0, -2px, 0);
+}
+
+.bx {
+  width: 40px;
+  height: 40px;
+  display: none;
+  position: relative;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .bx {
+    display: block;
+  }
+}
+
+.bx::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 33%;
+  left: 12%;
+  width: 75%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #EDF1F7;
+  -webkit-transition: 1.2s ease;
+  transition: 1.2s ease;
+}
+
+.bx::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 57%;
+  left: 32%;
+  width: 55%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #EDF1F7;
+  -webkit-transition: 1.5s ease;
+  transition: 1.5s ease;
+}
+
+.bx.close::after {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  top: 50%;
+}
+
+.bx.close::before {
+  -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+  top: 50%;
+  width: 75%;
+  left: 12%;
 }
 
 .btn {

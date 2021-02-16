@@ -29,8 +29,29 @@ header{
     }
 
     @include responsive(s){
-        display: none;
+        //display: none;
+        position: fixed;
+        top: 0;
+        right: -80%;
+  
+        height: 100vh;
+        margin: 0;
+        background: $gray-opacity;
+
+        width: 80%;
+        max-width: 180px;
+
+        padding: 100px 30px;
+
+        flex-direction: column;
+        align-items: flex-end;
+        transition: .7s ease;
     }
+
+}
+
+.nav-list.active{
+    right: 0;
 }
 
 .nav-link{
@@ -101,4 +122,70 @@ header{
             }
         }
     }
+}
+
+.bx{
+    width: 40px;
+    height: 40px;
+  
+    display: none;
+    position: relative;
+    cursor: pointer;
+  
+    @include responsive(s){
+      display: block;
+    }
+  
+    &::after{
+      content: '';
+      display: block;
+  
+      position: absolute;
+      top: 33%;
+      left: 12%;
+  
+      width: 75%;
+      height: 2px;
+      border-radius: 2px;
+  
+      background-color: $white;
+
+      transition: 1.2s ease;
+  
+    }
+  
+    &::before{
+      content: '';
+      display: block;
+  
+      position: absolute;
+      top: 57%;
+      left: 32%;
+  
+      width: 55%;
+      height: 2px;
+      border-radius: 2px;
+  
+      background-color: $white;
+
+      transition: 1.5s ease;
+  
+    }
+}
+
+.bx.close{
+    &::after{
+        transform: rotate(225deg);
+        
+        top: 50%;
+    }
+    &::before{
+        transform: rotate(-405deg);
+        
+        top: 50%;
+        width: 75%;
+        left: 12%;
+    }
+
+
 }

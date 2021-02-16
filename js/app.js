@@ -65,5 +65,4 @@ document.addEventListener('DOMContentLoaded', () => {
         {width: '0%', opacity: 0},
         {width: '100%', opacity: 1, ease: Power3.easeInOut
         }, '-=5');
-
 })
