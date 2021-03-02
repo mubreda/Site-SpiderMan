@@ -1,6 +1,6 @@
 ### Veja o projeto [AQUI](https://site-spider-man.mubreda.vercel.app/)
 
-<img src="https://lh6.googleusercontent.com/TM8Ku6MfDAzrv9gRae4TOufNXOhLBgztWWVQxS35s2v1NpVIZu39BSLekGF-Ys2WZQSgHIsesAS7Am0X8NPZ=w1920-h937-rw">
+<img src="https://github.com/mubreda/Site-SpiderMan/blob/main/img/spiderman.jpg">
 
 
 # 💻 Sobre o projeto
